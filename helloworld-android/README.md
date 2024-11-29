@@ -23,6 +23,7 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas y her
 2. Elige **"Empty Activity"** y haz clic en **"Next"**.
 3. En la pantalla de configuración del proyecto:
     - Nombra tu proyecto (por ejemplo, `HelloWorld`).
+    - Dale un nombre a los paquetes (por ejemplo, `es.jcs.subjects.pmdm.helloworld_android`)
     - Elige el lenguaje **Java**.
     - Elige la **versión mínima de Android** (por ejemplo, API 24).
 4. Haz clic en **"Finish"**.
@@ -34,12 +35,10 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas y her
 3. Espera a que la aplicación se compile y se ejecute en el dispositivo o emulador.
 4. Deberías ver la pantalla con el texto "Hello World".
 
-### Explicación
+En este punto, Android Studio habrá creado
 
-Android Studio habrá creado
-
-- un archivo `MainActivity.java` dentro de `app/src/main/java/tu/ruta/paquetes/`.
-- un archivo `activity_main.xml` dentro de `app/src/main/res/layout`.
+- una clase `MainActivity.java` que extiende de `Activity` dentro de `app/src/main/java/es/jcs/subjects/pmdm/helloworld_android`.
+- una layout `activity_main.xml` dentro de `app/src/main/res/layout`.
 - un archivo `AndroidManifest.xml` dentro de `app/src/main` declarando la Actividad Principal.
 
 ```java

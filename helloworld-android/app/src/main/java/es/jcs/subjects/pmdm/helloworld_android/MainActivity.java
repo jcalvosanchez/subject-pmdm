@@ -1,6 +1,8 @@
 package es.jcs.subjects.pmdm.helloworld_android;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +21,16 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        // Suscripción al evento onClick de btnClickMe utilizando OnClickListener
+        findViewById(R.id.btnClickMe).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                findViewById(R.id.textBtnClicked).setVisibility(View.VISIBLE);
+                // Mostrar un mensaje Toast de corta duración cuando el botón es clickeado
+                Toast.makeText(MainActivity.this, "¡Botón clickeado!", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }
