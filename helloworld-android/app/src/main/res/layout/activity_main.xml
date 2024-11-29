@@ -10,22 +10,16 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textHelloWorld"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:text="Hello World!"/>
 
     <Button
-        android:id="@+id/btnClickMe"
+        android:id="@+id/btnHelloWorld"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Click Me" />
-
-    <TextView
-        android:id="@+id/textBtnClicked"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¡Botón clickeado!"
-        android:visibility="gone"
-        android:layout_centerInParent="true"/>
 
 </LinearLayout>

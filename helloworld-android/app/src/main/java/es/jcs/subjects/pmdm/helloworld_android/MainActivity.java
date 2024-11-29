@@ -23,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Suscripción al evento onClick de btnClickMe utilizando OnClickListener
-        findViewById(R.id.btnClickMe).setOnClickListener(new View.OnClickListener() {
+        // Suscripción al evento onClick de btnHelloWorld utilizando OnClickListener
+        findViewById(R.id.btnHelloWorld).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                findViewById(R.id.textBtnClicked).setVisibility(View.VISIBLE);
+                findViewById(R.id.textHelloWorld).setVisibility(View.VISIBLE);
                 // Mostrar un mensaje Toast de corta duración cuando el botón es clickeado
                 Toast.makeText(MainActivity.this, "¡Botón clickeado!", Toast.LENGTH_SHORT).show();
             }

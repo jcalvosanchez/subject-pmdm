@@ -23,14 +23,14 @@ public class MainActivityTest {
                 .onActivity(activity -> {
                     // Verificar que el TextView está inicialmente oculto
                     assertEquals("El TextView debería estar inicialmente oculto",
-                            View.GONE, activity.findViewById(R.id.textBtnClicked).getVisibility());
+                            View.GONE, activity.findViewById(R.id.textHelloWorld).getVisibility());
 
                     // Simulamos el clic en el botón
-                    activity.findViewById(R.id.btnClickMe).performClick();
+                    activity.findViewById(R.id.btnHelloWorld).performClick();
 
                     // Verificar que el TextView se hace visible después del clic
                     assertEquals("El TextView debería ser visible después del clic",
-                            View.VISIBLE, activity.findViewById(R.id.textBtnClicked).getVisibility());
+                            View.VISIBLE, activity.findViewById(R.id.textHelloWorld).getVisibility());
                 }
         );
     }
