@@ -20,6 +20,12 @@
         android:id="@+id/btnHelloWorld"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click Me" />
+        android:text="Hello World Button" />
+
+    <Button
+        android:id="@+id/btnOpenWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abrir Página Web" />
 
 </LinearLayout>

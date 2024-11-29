@@ -168,10 +168,10 @@ Vamos a modificar el archivo `activity_main.xml`:
         android:text="Hello World!"/>
 
     <Button
-        android:id="@+id/btnClickMe"
+        android:id="@+id/btnHelloWorld"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click Me" />
+        android:text="Hello World Button" />
 
 </LinearLayout>
 ```
@@ -248,5 +248,42 @@ public class MainActivityTest {
 - [Documentación oficial de Android sobre eventos y listeners](https://developer.android.com/develop/ui/views/touch-and-input/input-events?hl=es-419)
 - [Toast](https://developer.android.com/reference/android/widget/Toast)
 
-## Nuevo Intent Explícito "Bye World" en Android
+## Intents en Android
+
+### ¿Qué es un Intent en Android?
+
+Un **Intent** en Android es un mecanismo para enviar datos entre componentes de una aplicación o entre diferentes aplicaciones. Existen dos tipos de **Intents**:
+
+- **Intents Implícitos**: No especifican el componente que se debe invocar, sino que describen una acción que debe llevarse a cabo (por ejemplo, abrir una página web, hacer una llamada telefónica), y el Sistema Operativo se encargará de encontrar la aplicación adecuada para ejecutar dicha acción.
+- **Intents Explícitos**: Se utiliza cuando se especifica explícitamente el componente que se desea invocar (por ejemplo, abrir una actividad específica dentro de tu aplicación).
+
+### Intent Implícito - abrir una página web
+
+Queremos abrir una página web, por ejemplo  desde nuestra aplicación en el Dispositivo Móvil.
+
+Añadimos un botón en nuestra `activity_main.xml`
+
+```xml
+       <Button
+           android:id="@+id/btnOpenWeb"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Abrir Página Web" />
+```
+
+Para ello utilizaremos un **Intent implícito** utilizaremos el **Intent.ACTION_VIEW**. Abrimos un Intent en la Actividad
+
+```java
+findViewById(R.id.btnOpenWeb).setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        // Crear el URI para la URL que queremos abrir
+        Uri webPage = Uri.parse("https://jcalvosanchez.github.io/");
+
+        // Crear un intent para abrir el navegador
+        Intent intent = new Intent(Intent.ACTION_VIEW, webPage);
+        startActivity(intent);
+    }
+});
+```
 

@@ -1,5 +1,7 @@
 package es.jcs.subjects.pmdm.helloworld_android;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -30,6 +32,18 @@ public class MainActivity extends AppCompatActivity {
                 findViewById(R.id.textHelloWorld).setVisibility(View.VISIBLE);
                 // Mostrar un mensaje Toast de corta duración cuando el botón es clickeado
                 Toast.makeText(MainActivity.this, "¡Botón clickeado!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        findViewById(R.id.btnOpenWeb).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Crear el URI para la URL que queremos abrir
+                Uri webPage = Uri.parse("https://jcalvosanchez.github.io/");
+
+                // Crear un intent para abrir el navegador
+                Intent intent = new Intent(Intent.ACTION_VIEW, webPage);
+                startActivity(intent);
             }
         });
     }
